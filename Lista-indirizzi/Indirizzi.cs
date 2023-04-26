@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lista_indirizzi
 {
-    internal class Indirizzi
+    public class Indirizzi
     {
 
         private string nome;
@@ -14,22 +14,28 @@ namespace Lista_indirizzi
         private string via;
         private string città;
         private string provincia;
-        private int cap;
+        private int zip;
 
-        public Indirizzo(string nome, string cognome, string via, string città, string provincia, int cap)
+        public Indirizzi(string nome, string cognome, string via, string città, string provincia, int zip)
         {
             this.nome = nome;
             this.cognome = cognome;
             this.via = via;
             this.città = città;
             this.provincia = provincia;
-            this.cap = cap;
+            this.zip = zip;
         }
 
         public override string ToString()
         {
-            string riga = "------\nIndirizzo di" + nome + " " + cognome;
-            riga += "\n" + via + ", " + città + ", " + provincia + ", " + cap;
+            string riga = "";
+            riga += "Nome: " + this.nome + "\n";
+            riga += "Cognome: " + this.cognome + "\n";
+            riga += "Via: " + this.via + "\n";
+            riga += "Città: " + this.città + "\n";
+            riga += "Provincia: " + this.provincia + "\n";
+            riga += "ZIP: " + this.zip + "\n";
+            riga += "-------------------";
             return riga;
         }
     }
