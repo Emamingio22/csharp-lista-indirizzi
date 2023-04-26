@@ -25,5 +25,12 @@ namespace Lista_indirizzi
             this.provincia = provincia;
             this.cap = cap;
         }
+
+        public override string ToString()
+        {
+            string riga = "------\nIndirizzo di" + nome + " " + cognome;
+            riga += "\n" + via + ", " + città + ", " + provincia + ", " + cap;
+            return riga;
+        }
     }
 }
